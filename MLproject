@@ -5,6 +5,7 @@ conda_env: conda.yaml
 entry_points:
   main:
     parameters:
+      run_type: {type: string, default: dev}
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.1}
     command: "python train.py {alpha} {l1_ratio}"
